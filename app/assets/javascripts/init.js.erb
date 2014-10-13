@@ -3,7 +3,11 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+//= depend_on_asset "style.css"
+//= depend_on_asset "style-wide.css"
+//= depend_on_asset "style-normal.css"
+//= depend_on_asset "style-narrow.css"
+//= depend_on_asset "style-mobile.css"
 (function($) {
 
 	var settings = {
@@ -24,11 +28,11 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-      'global':	{ range: '*', href: "<%= asset_url('style.css') %>", containers: 1140 },
-      'wide':		{ range: '-1680', href: "<%= asset_url('style-wide.css') %>", containers: 960 },
-      'normal':	{ range: '-1080', href: "<%= asset_url('style-normal.css') %>", containers: '95%', lockViewport: true },
-      'narrow':	{ range: '-840', href: "<%= asset_url('style-narrow.css') %>", grid: { gutters: 30 } },
-      'mobile':	{ range: '-640', href: "<%= asset_url('style-mobile.css') %>", grid: { collapse: true, gutters: 20 } }
+      'global': { range: '*', href: "<%= asset_path('style', type: :stylesheet) %>", containers: 1140 },
+      'wide': { range: '-1680', href: "<%= asset_path('style-wide', type: :stylesheet) %>", containers: 960 },
+      'normal': { range: '-1080', href: "<%= asset_path('style-normal', type: :stylesheet) %>", containers: '95%', lockViewport: true },
+      'narrow': { range: '-840', href: "<%= asset_path('style-narrow', type: :stylesheet) %>", grid: { gutters: 30 } },
+      'mobile': { range: '-640', href: "<%= asset_path('style-mobile', type: :stylesheet) %>", grid: { collapse: true, gutters: 20 } }
 		}
 	});
 
