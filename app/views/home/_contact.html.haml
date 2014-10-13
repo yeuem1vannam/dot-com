@@ -1,0 +1,20 @@
+/Contact
+%article.container.box.style3
+  %header
+    %h2 Nisl sed ultricies
+    %p Diam dignissim lectus eu ornare volutpat orci.
+
+  %form{method: "post", action: "#"}
+    .row.half
+      .6u
+        %input.text{type: "text", name: "name", placeholder: "Name"}/
+      .6u
+        %input.text{type: "text", name: "email", placeholder: "Email"}/
+    .row.half
+      .12u
+        %textarea{name: "message", placeholder: "Message"}
+    .row
+      .12u
+        %ul.actions
+          %li
+            %input{type: "submit", value: "Send Message"}/
