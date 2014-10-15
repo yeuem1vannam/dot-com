@@ -17,5 +17,6 @@
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym 'YeuEm1VanNam'
+  inflect.acronym 'HTTP'
   inflect.uncountable %w( home )
 end

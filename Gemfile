@@ -6,6 +6,7 @@ gem 'rails', '4.1.6'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
+gem 'rest_client'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,7 +45,9 @@ group :development do
   # bin/spring binstub --remove --all
   # gem 'spring'
   gem 'pry-byebug', '~> 2.0.0'
-  gem 'binding_of_caller'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "rack-mini-profiler"
 end
 
 platforms :ruby do
