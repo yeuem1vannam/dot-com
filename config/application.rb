@@ -32,5 +32,14 @@ module YeuEm1VanNam
       g.assets          false
       g.helper          false
     end
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :authentication => :plain,
+      :address => "smtp.mailgun.org",
+      :port => 587,
+      :domain => "yeuem1vannam.com",
+      :user_name => "postmaster@yeuem1vannam.com",
+      :password => "68d26cd47e6fefbe2680af8538d742b0"
+    }
   end
 end

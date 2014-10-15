@@ -4,16 +4,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 gem 'mongoid'
+gem 'bson_ext'
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-platforms :ruby do
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
-end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -24,15 +22,6 @@ gem 'jbuilder', '~> 2.0'
 gem "haml"
 gem "haml-rails"
 gem 'skeleton-rails'
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '~> 0.4.0'
-end
-
-group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -45,3 +34,20 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', '~> 0.4.0'
+end
+
+group :development do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # bin/spring binstub --remove --all
+  # gem 'spring'
+  gem 'pry-byebug', '~> 2.0.0'
+  gem 'binding_of_caller'
+end
+
+platforms :ruby do
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  gem 'therubyracer'
+end
