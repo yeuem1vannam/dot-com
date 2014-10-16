@@ -1,3 +1,4 @@
+require 'impressionist'
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -20,18 +21,18 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new do
-      only [Post]
+      only ['Post']
     end
     export
     bulk_delete do
-      except [Message]
+      except ['Message']
     end
     show
     edit do
-      except [Message]
+      except ['Message']
     end
     delete do
-      except [Message]
+      except ['Message']
     end
     show_in_app
 
@@ -39,7 +40,7 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-  config.model Post do
+  config.model 'Post' do
     list do
       exclude_fields :created_at, :body, :html_body
       # exclude_fields :body
@@ -61,7 +62,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model Message do
+  config.model 'Message' do
     list do
       exclude_fields :updated_at
     end

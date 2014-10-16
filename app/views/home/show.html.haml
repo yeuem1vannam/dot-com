@@ -2,9 +2,8 @@
 
 = render 'banner'
 
-- l_doc, r_doc = *Post.limit(2)
 - Post.active.each_with_index do |post, inx|
-  = render partial: "feature_#{ (inx % 2).zero? ? :left : :right}", locals: {doc: post}
+  = render partial: "feature_#{ inx.even? ? :left : :right}", locals: {doc: post}
 
 = render 'portfolio'
 

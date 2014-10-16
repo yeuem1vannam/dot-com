@@ -2,6 +2,8 @@ class Post
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  is_impressionable
+
   field :title, type: String, default: "Post #{Time.now}"
   field :body, type: String, default: ""
   field :html_body, type: String, default: ""
