@@ -1,20 +1,20 @@
 /Contact
 %article.container.box.style3
   %header
-    %h2 Nisl sed ultricies
-    %p Diam dignissim lectus eu ornare volutpat orci.
+    %h2 Contact
+    %p Feel free to drop me an email.
 
-  %form{method: "post", action: "#"}
+  = form_for(Message.new) do |f|
     .row.half
       .6u
-        %input.text{type: "text", name: "name", placeholder: "Name"}/
+        = f.text_field :name, placeholder: "Name"
       .6u
-        %input.text{type: "text", name: "email", placeholder: "Email"}/
+        = f.email_field :email, placeholder: "Email"
     .row.half
       .12u
-        %textarea{name: "message", placeholder: "Message"}
+        = f.text_area :message, placeholder: "Message"
     .row
       .12u
         %ul.actions
           %li
-            %input{type: "submit", value: "Send Message"}/
+            = f.submit "Send Message"

@@ -23,10 +23,16 @@ RailsAdmin.config do |config|
       only [Post]
     end
     export
-    bulk_delete
+    bulk_delete do
+      except [Message]
+    end
     show
-    edit
-    delete
+    edit do
+      except [Message]
+    end
+    delete do
+      except [Message]
+    end
     show_in_app
 
     ## With an audit adapter, you can add:
@@ -35,9 +41,9 @@ RailsAdmin.config do |config|
   end
   config.model Post do
     list do
-      exclude_fields :created_at
-      exclude_fields :body
-      exclude_fields :html_body
+      exclude_fields :created_at, :body, :html_body
+      # exclude_fields :body
+      # exclude_fields :html_body
     end
 
     edit do
@@ -52,6 +58,12 @@ RailsAdmin.config do |config|
       field :publicity, :boolean do
         help "Public this post?"
       end
+    end
+  end
+
+  config.model Message do
+    list do
+      exclude_fields :updated_at
     end
   end
 end

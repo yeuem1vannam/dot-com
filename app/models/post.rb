@@ -6,6 +6,7 @@ class Post
   field :body, type: String, default: ""
   field :html_body, type: String, default: ""
   field :publicity, type: Boolean, default: false
+
   before_validation :generate_html
 
   scope :active, -> { where({ publicity: true }) }
