@@ -8,6 +8,7 @@ gem 'bson_ext'
 gem 'devise'
 gem 'rest_client'
 gem 'rails_admin'
+gem 'rails_admin_epic_editor', github: 'yeuem1vannam/rails_admin_epic_editor'
 # gem 'paper_trail', '~> 3.0.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

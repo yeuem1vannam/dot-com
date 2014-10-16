@@ -36,11 +36,12 @@ RailsAdmin.config do |config|
     edit do
       # For RailsAdmin >= 0.5.0
       field :title, :string
-      field :body, :text do
-        html_attributes do
-          { cols: '48', rows: '3',}
-        end
-      end
+      field :body, :epic_editor
+      # field :body, :text do
+      #   html_attributes do
+      #     { cols: '48', rows: '3',}
+      #   end
+      # end
       # For RailsAdmin < 0.5.0
       # field :description do
       #   codemirror true
