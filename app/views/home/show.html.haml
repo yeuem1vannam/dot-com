@@ -2,9 +2,9 @@
 
 = render 'banner'
 
-= render 'feature_left'
-
-= render 'feature_right'
+- l_doc, r_doc = *Post.limit(2)
+= render partial: 'feature_left', locals: {doc: l_doc}
+= render partial: 'feature_right', locals: {doc: r_doc}
 
 = render 'portfolio'
 
