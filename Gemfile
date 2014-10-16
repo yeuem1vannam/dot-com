@@ -6,6 +6,8 @@ gem 'rails', '4.1.6'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
+gem 'rails_admin'
+# gem 'paper_trail', '~> 3.0.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
