@@ -12,5 +12,6 @@
  *
  *= require skel
  *= require style
+ *= require syntax
  *= require_self
  */

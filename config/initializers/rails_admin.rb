@@ -19,7 +19,9 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
+    new do
+      only [Post]
+    end
     export
     bulk_delete
     show
@@ -32,20 +34,24 @@ RailsAdmin.config do |config|
     # history_show
   end
   config.model Post do
-    # configure :code, :code_mirror
+    list do
+      exclude_fields :created_at
+      exclude_fields :body
+      exclude_fields :html_body
+    end
+
     edit do
+      exclude_fields :html_body
       # For RailsAdmin >= 0.5.0
-      field :title, :string
-      field :body, :epic_editor
-      # field :body, :text do
-      #   html_attributes do
-      #     { cols: '48', rows: '3',}
-      #   end
-      # end
-      # For RailsAdmin < 0.5.0
-      # field :description do
-      #   codemirror true
-      # end
+      field :title, :string do
+        help "Length up to 255"
+      end
+      field :body, :epic_editor do
+        help "Use markdown"
+      end
+      field :publicity, :boolean do
+        help "Public this post?"
+      end
     end
   end
 end
