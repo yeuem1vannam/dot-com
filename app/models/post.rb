@@ -9,7 +9,8 @@ class Post
 
   before_validation :generate_html
 
-  scope :active, -> { where({ publicity: true }) }
+  scope :active, ->{ where({ publicity: true }) }
+  scope :inactive, ->{ where({ :publicity.ne => true }) }
 
   private
   def generate_html

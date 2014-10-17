@@ -1,0 +1,7 @@
+%article{class: %w{container box style1 gallery}.insert(-2, inx.even? ? "left" : "right")}
+  = link_to doc, class: %w{image fit}, data: {poptrox:  "iframe,800x600"} do
+    %img{src: asset_url('pic02.jpg'), alt: "", title: doc.title}
+
+  .inner
+    %header
+      = doc.html_body.html_safe
