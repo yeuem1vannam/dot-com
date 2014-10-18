@@ -73,4 +73,5 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.default_url_options = { host: 'www.yeuem1vannam.com' }
+  config.action_dispatch.default_headers.merge!('X-Frame-Options' => 'ALLOWALL')
 end

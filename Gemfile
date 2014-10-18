@@ -26,7 +26,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem "haml"
 gem "haml-rails"
-gem 'skeleton-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,7 +47,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # bin/spring binstub --remove --all
   # gem 'spring'
+  gem 'pry'
+  gem 'pry-theme'
+  gem 'pry-rails'
   gem 'pry-byebug', '~> 2.0.0'
+  gem 'pry-doc'
   gem "better_errors"
   gem "binding_of_caller"
   gem "rack-mini-profiler"
