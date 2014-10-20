@@ -38,6 +38,8 @@ gem "haml-rails"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# New Relic APM
+gem 'newrelic_rpm'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '~> 0.4.0'
@@ -55,6 +57,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "rack-mini-profiler"
+  gem 'brakeman'
 end
 
 platforms :ruby do

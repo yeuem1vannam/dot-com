@@ -2,7 +2,6 @@
 
 = render 'banner'
 
-- l_doc, r_doc = *Post.limit(2)
 - Post.active.each_with_index do |post, inx|
   = render partial: "post", locals: {doc: post, inx: inx}
 

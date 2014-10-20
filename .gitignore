@@ -6,6 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
+# Ignore RVM versions on local machine
+/.versions.conf
 /.c9
 /.c9/*
 
@@ -18,3 +20,4 @@
 /tmp
 /spring
 /spring/*
+/bundler201*
