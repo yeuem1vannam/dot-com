@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get "games/:file_name" => "games#show" # , constraints: {file_name: /#{STATIC_PAGES.join("|")}/}
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: "home#show"

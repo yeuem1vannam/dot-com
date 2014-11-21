@@ -21,3 +21,4 @@
 /spring
 /spring/*
 /bundler201*
+.versions.conf

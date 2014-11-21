@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Pong
+    :css
+      /* Removes Mobile Highlight */ *{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+    %script{src: "http://code.createjs.com/createjs-2013.12.12.min.js"}
+    = javascript_include_tag("games_pong")
+  %body{onload: "Main();", style: "margin: 50px 0 0 80px;"}
+    %canvas#PongStage{height: "320", width: "480"}
